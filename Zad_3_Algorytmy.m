@@ -29,6 +29,11 @@ lambdaS = (lamA + lamD) / 2;
 %Obliczanie pola czworokąta
 [P] = Pole(fiA, lamA, fiB, lamC, a, e2);
 
+%Zaokrąglanie wyników
+sAD = round(sAD, 3);
+sSredSzer_Srod = round(sSredSzer_Srod, 3);
+P = round(P, 6);
+
 %Pole czworokąta
 function [P] = Pole(fiA, lamA, fiB, lamB, a, e2)
     b = a * sqrt(1-e2); %metry
