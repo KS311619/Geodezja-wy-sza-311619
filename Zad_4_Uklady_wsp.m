@@ -99,9 +99,9 @@ P20 = Pole(PL20xA, PL20yA, PL20xB, PL20yB, PL20xC, PL20yC, PL20xD, PL20yD);
 %Zniekształcenie
 function[k, kha, m2] = Zniekszt(m_u)
     k = 1 - m_u;
-    k = round(k*1000, 2);
+    k = round(-k*1000, 3);
     kha = 1 - m_u^2;
-    kha = round(kha*10000, 2);
+    kha = round(-kha*10000, 6);
     m2 = round(m_u^2, 6);
 end
 
