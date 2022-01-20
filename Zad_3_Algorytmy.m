@@ -20,11 +20,11 @@ lambdaS = (lamA + lamD) / 2;
 %Algorytm Vincentego dla przekątnej AD (wynik w metrach i stopniach)
 [sAD, Aad, Ada] = Vincent(fiA, lamA, fiD, lamD, a, e2);
 
-%Algorytm Kivioja dla punktu A (wynik w stopniach)
-[FiS, LambdaS, AzymS, AzymSo] = Kivioj(fiA, lamA, sAD, Aad, a, e2);
+%Algorytm Kivioja dla punktu A, wyznaczający punkt środkowy (wynik w stopniach)
+[FiSr, LambdaSr, AzymSr, AzymSro] = Kivioj(fiA, lamA, sAD, Aad, a, e2);
 
 %Obliczanie różnicy odległości między punktem średniej szerokości i punkem środkowym
-[sSredSzer_Srod, Aseso, Asose] = Vincent(fiS, lambdaS, FiS, LambdaS, a, e2);
+[sSredSzer_Srod, Aseso, Asose] = Vincent(fiS, lambdaS, FiSr, LambdaSr, a, e2);
 
 %Obliczanie pola czworokąta
 [P] = Pole(fiA, lamA, fiB, lamC, a, e2);
